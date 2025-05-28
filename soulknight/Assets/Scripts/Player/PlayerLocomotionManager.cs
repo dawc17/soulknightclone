@@ -11,6 +11,9 @@ namespace Tenko
         [SerializeField] private float moveSpeed = 5f;
         [SerializeField] private Vector2 moveInput = Vector2.zero;
 
+        public Vector2 moveDir => moveInput; // Public property to access moveInput
+        public float LastHorizontalVector { get; private set; } = 1f; // Default facing right
+
         PlayerControls playerControls;
 
         private void Awake()
@@ -41,6 +44,12 @@ namespace Tenko
         private void OnMovementPerformed(InputAction.CallbackContext ctx)
         {
             moveInput = ctx.ReadValue<Vector2>();
+
+            // Update LastHorizontalVector when horizontal input changes
+            if (moveInput.x != 0)
+            {
+                LastHorizontalVector = moveInput.x;
+            }
         }
 
         private void OnMovementCanceled(InputAction.CallbackContext ctx)

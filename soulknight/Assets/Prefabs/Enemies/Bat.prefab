@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1650697144112825212}
   - component: {fileID: 6159863763565176117}
   - component: {fileID: 3532291042471215491}
+  - component: {fileID: 7167262429937817228}
   m_Layer: 0
   m_Name: Bat
   m_TagString: Enemy
@@ -110,3 +111,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7167262429937817228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2589458227562081133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24cd8212b58cd5a48a187a04c2e7195c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
